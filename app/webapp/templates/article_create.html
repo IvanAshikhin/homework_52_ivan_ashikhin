@@ -1,11 +1,13 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-    <h1>New Task</h1>
+    <h1 class="new_task">New Task</h1>
     <form method="POST" action="/article/add/">
   {% csrf_token %}
   <label for="description">Description:</label>
@@ -20,7 +22,6 @@
 
   <label for="done_date">Done Date:</label>
   <input type="date" id="done_date" name="done_date"><br>
-
   <input type="submit" value="Submit">
 </form>
 
