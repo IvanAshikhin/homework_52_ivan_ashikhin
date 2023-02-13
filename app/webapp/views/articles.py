@@ -20,6 +20,11 @@ def detail_view(request):
     article_pk = request.GET.get('pk')
     article = Article.objects.get(pk=article_pk)
     context = {'article': article}
-    return render(request,'article_detail.html', context=context)
+    return render(request, 'article_detail.html', context=context)
 
 
+def delete_view(request):
+    article_pk = request.GET.get('pk')
+    article = Article.objects.get(pk=article_pk)
+    article.delete()
+    return redirect('/')
