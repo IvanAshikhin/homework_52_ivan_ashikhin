@@ -1,5 +1,6 @@
 from django.db import models
 
+
 # Create your models here.
 
 class Article(models.Model):
@@ -9,6 +10,3 @@ class Article(models.Model):
 
     def __str__(self):
         return f'{self.description} {self.status} {self.done_date}'
-
-
-
