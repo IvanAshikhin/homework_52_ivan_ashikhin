@@ -1,9 +1,11 @@
 from django.urls import path
 
 
-from webapp.views import base
+from webapp.views import base, articles
 
 urlpatterns = [
     path("", base.index_view),
+    path('article/add/', articles.add_view),
+    path('article/', articles.detail_view)
 ]
 
