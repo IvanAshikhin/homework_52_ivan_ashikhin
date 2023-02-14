@@ -6,5 +6,5 @@ urlpatterns = [
     path("", base.index_view),
     path('article/add/', articles.add_view),
     path('article/', articles.detail_view),
-    path('article/delete/',articles.delete_view)
+    path('article/delete/', articles.delete_view)
 ]

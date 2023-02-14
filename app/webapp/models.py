@@ -6,7 +6,7 @@ from django.db import models
 class Article(models.Model):
     description = models.TextField(max_length=500, null=False, blank=False, verbose_name='Описание задачи')
     status = models.CharField(max_length=100, null=False, default='new', blank=False, verbose_name='Статус')
-    done_date = models.DateField(auto_now=True, verbose_name="Дата выполнения")
+    done_date = models.DateField(auto_now=False, verbose_name="Дата выполнения")
 
     def __str__(self):
         return f'{self.description} {self.status} {self.done_date}'
